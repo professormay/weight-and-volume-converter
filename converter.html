@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Weight converter - US units into international system</title> 
+  </head>
+
+  <body> 
+    <div="container">
+      <div class="title"><h1 style="color: rgb(190, 41, 41)">Weight and volume converter</h1>
+        <p style="color: rgb(36, 148, 32)">Want to try out a new recipe you found on YouTubem but the ingredients are shown in ounces, oz, etc? Here's the solution - an easy to use weight converter</p>
+      
+      </div>
+
+      <div box-1>
+        <h2 style="color: rgb(119, 107, 187)">Weight</h2>
+        <p>Enter a value into a kilograms box:</p> 
+  
+        <p> 
+            <!-- label the input field -->
+            <label>Kilograms</label> 
+            <!-- input tag for enter the data -->
+            <!-- kiloweightConvert function call 
+ function kiloweightConvert to evaluate value-->
+            <input id="Kilograms" 
+                   type="number" 
+                   placeholder="kilograms" 
+                   oninput="kiloweightConvert(this.value)" 
+                   onchange="kiloweightConvert(this.value)" /> 
+        </p> 
+        <!-- output field-->
+        <p>Pounds: <span id="Pounds"></span></p> 
+        <p>Ounces: <span id="Ounces"></span></p> 
+        <p>Grams: <span id="Grams"></span></p> 
+        <p>Stones: <span id="Stones"></span></p> 
+  
+        <script> 
+  
+            function kiloweightConvert(value) { 
+                document.getElementById("Pounds").innerHTML = 
+                  value * 2.2046; 
+                document.getElementById("Ounces").innerHTML = 
+                  value * 35.274; 
+                document.getElementById("Grams").innerHTML = 
+                  value * 1000; 
+                document.getElementById("Stones").innerHTML = 
+                  value * 0.1574; 
+            } 
+        </script>
+      </div> 
+     
+      <div box-2>
+        <h2 style="color: lightskyblue">Volume</h2>
+        <p>Enter a value into a fl oz(fluid ounce) box:</p> 
+  
+        <p> 
+            <label>Fl oz</label> 
+            <input id="ounces" 
+                   type="number" 
+                   placeholder="ounces" 
+                   oninput="volumeConvert(this.value)" 
+                   onchange="volumeConvert(this.value)" /> 
+        </p> 
+        <!-- output field-->
+        <p>ml: <span id="milliliter"></span></p> 
+        <p>cup: <span id="cup"></span></p> 
+        <p>pint: <span id="pint"></span></p> 
+        <script> 
+
+     //function that evaluates the volume and returns result 
+            function volumeConvert(value) { 
+                document.getElementById("milliliter").innerHTML = 
+                  value * 2.2046; 
+                document.getElementById("cup").innerHTML = 
+                  value * 35.274; 
+                document.getElementById("pint").innerHTML = 
+                  value * 1000; 
+            } 
+        </script>
+      </div> 
+
+
+
+    </div>
+   
+
+  </body>
+</html>
